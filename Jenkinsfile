@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
     steps {
-       withEnv(['PYTHONPATH=/usr/bin/python3']) {
+       withEnv(['PYTHONPATH=/usr/lib/python3/']) {
     sh  'python3 main.py'
 }
     }

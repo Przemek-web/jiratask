@@ -8,16 +8,16 @@ class Email:
         self.topic = topic
 
     def send(self):
-        mail_content = self.topic
+        mail_content = "Chcieliśmy poinformować, że w aktywnym sprincie znajdują się " +self.topic + " nieprzypisane user stories."
         # The mail addresses and password
-        sender_address = 'WikiGameBoard@gmail.com'
-        sender_pass = 'wikigame2020'
+        sender_address = 'jiratest34@gmail.com'
+        sender_pass = 'rpatask123'
         receiver_address = 'Przemyslaw.Gornik@cybercom.com'
         # Setup the MIME
         message = MIMEMultipart()
         message['From'] = sender_address
         message['To'] = receiver_address
-        message['Subject'] = 'Unassigned tasks in active sprint.'  # The subject line
+        message['Subject'] = 'Nieprzypisane zadania w aktywnym sprincie'  # The subject line
         # The body and the attachments for the mail
         message.attach(MIMEText(mail_content, 'plain'))
         # Create SMTP session for sending the mail
@@ -27,5 +27,5 @@ class Email:
         text = message.as_string()
         session.sendmail(sender_address, receiver_address, text)
         session.quit()
-        print('Mail Sent')
+        print('Wysłano email')
 
