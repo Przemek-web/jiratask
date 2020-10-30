@@ -3,7 +3,7 @@ pipeline {
   stages {
   stage('install') {
     steps {
-        pip install jira
+        pip3 install jira
     }
 }
   stage('build') {
