@@ -2,9 +2,10 @@ pipeline {
   agent any
   stages {
     stage('build') {
-    steps {
-        sh 'python3 main.py'
-    }
+    withEnv(['PYTHONPATH=/usr/bin/python3.8']) {
+    sh  'python3 main.py'
+}
+
 }
   }
 }
