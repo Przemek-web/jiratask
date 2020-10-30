@@ -1,13 +1,9 @@
 pipeline {
   agent any
   stages {
-  stage('install') {
+    stage('build') {
     steps {
         pip3 install jira
-    }
-}
-  stage('build') {
-    steps {
         sh 'python3 main.py'
     }
 }
