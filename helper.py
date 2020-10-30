@@ -1,6 +1,3 @@
-import sys
-import os
-sys.path.append(os.environ['WORKSPACE'])
 from jira import JIRA
 
 
