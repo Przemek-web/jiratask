@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
     steps {
-        export PYTHONPATH=$PATH_TO_MODULE:$PYTHONPATH
+        export 'PYTHONPATH=$PATH_TO_MODULE:$PYTHONPATH'
         sh 'python3 main.py'
     }
 }
